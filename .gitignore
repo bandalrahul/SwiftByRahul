@@ -4,4 +4,4 @@
 /.swiftpm
 /*.xcodeproj
 .publish
-output
+Output
