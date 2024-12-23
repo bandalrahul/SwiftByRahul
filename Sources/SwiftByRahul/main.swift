@@ -14,7 +14,7 @@ struct SwiftByRahul: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://bandalrahul.github.io")!
+    var url = URL(string: "https://bandalrahul.github.io/SwiftByRahul/")!
     var name = "SwiftByRahul"
     var description = "A description of SwiftByRahul"
     var language: Language { .english }
@@ -32,7 +32,7 @@ try SwiftByRahul()
         .generateSiteMap(),
         // Deployment step
         .deploy(using: .gitHub(
-            "https://bandalrahul.github.io",
+            "https://bandalrahul.github.io/SwiftByRahul/",
             branch: "main",
             useSSH: false)
         )
