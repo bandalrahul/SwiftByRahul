@@ -14,7 +14,7 @@ struct SwiftByRahul: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://bandalrahul.github.io/SwiftByRahul/")!
+    var url = URL(string: "https://bandalrahul.github.io")!
     var name = "SwiftByRahul"
     var description = "A description of SwiftByRahul"
     var language: Language { .english }
@@ -22,4 +22,18 @@ struct SwiftByRahul: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try SwiftByRahul().publish(withTheme: .foundation)
+//try SwiftByRahul().publish(withTheme: .foundation)
+try SwiftByRahul()
+    .publish(using: [
+        .addMarkdownFiles(),
+        .copyResources(),
+        .generateHTML(withTheme: .foundation),
+        .generateRSSFeed(including: [.posts]),
+        .generateSiteMap(),
+        // Deployment step
+        .deploy(using: .gitHub(
+            "https://bandalrahul.github.io",
+            branch: "main",
+            useSSH: false)
+        )
+    ])
