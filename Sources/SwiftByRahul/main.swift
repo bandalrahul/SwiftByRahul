@@ -22,18 +22,4 @@ struct SwiftByRahul: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-//try SwiftByRahul().publish(withTheme: .foundation)
-try SwiftByRahul()
-    .publish(using: [
-        .addMarkdownFiles(),
-        .copyResources(),
-        .generateHTML(withTheme: .foundation),
-        .generateRSSFeed(including: [.posts]),
-        .generateSiteMap(),
-        // Deployment step
-        .deploy(using: .gitHub(
-            "https://bandalrahul.github.io/SwiftByRahul/",
-            branch: "main",
-            useSSH: false)
-        )
-    ])
+try SwiftByRahul().publish(withTheme: .foundation)
