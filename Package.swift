@@ -19,6 +19,6 @@ let package = Package(
             name: "SwiftByRahul",
             dependencies: ["Publish"]
         )
-    ],
-    swiftLanguageVersions: [.version("5.4")]
+    ]
 )
+
