@@ -15,8 +15,8 @@ struct SwiftByRahul: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://bandalrahul.github.io/SwiftByRahul/")!
-    var name = "SwiftByRahul"
-    var description = "A description of SwiftByRahul"
+    var name = "Swift By Rahul"
+    var description = ""
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
