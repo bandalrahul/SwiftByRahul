@@ -7,4 +7,13 @@
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 [build] command = "swift build" environment = \{ SWIFT_VERSION = "5.5" \} [context.production] environment = \{ SWIFT_VERSION = "5.5" \} [build.environment] SWIFT_VERSION = "5.5"}
+[build]\
+  command = "swift build"\
+  environment = \{ SWIFT_VERSION = "5.5" \}\
+\
+[context.production]\
+  environment = \{ SWIFT_VERSION = "5.5" \}\
+\
+[build.environment]\
+  SWIFT_VERSION = "5.5"\
+}
