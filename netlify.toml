@@ -1,7 +1,0 @@
-[build]
-  command = "swift build"
-  environment = { SWIFT_VERSION = "5.5" }
-
-[context.production]
-  environment = { SWIFT_VERSION = "5.5" }
-
