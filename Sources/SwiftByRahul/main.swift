@@ -254,7 +254,13 @@ private struct SiteFooter: Component {
     }
 }
 
-try SwiftByRahul().publish(withTheme: .myTheme)
+//try SwiftByRahul().publish(withTheme: .myTheme)
+try SwiftByRahul().publish(using: [
+    .addMarkdownFiles(),
+    .copyResources(),
+    .generateHTML(withTheme: .myTheme), // Using your custom theme
+    .deploy(using: .gitHub("bandalrahul/SwiftByRahul", branch: "main"))
+])
 
 func adsenseBanner() -> Node<HTML.BodyContext> {
     return .div(
